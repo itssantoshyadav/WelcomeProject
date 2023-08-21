@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNgTesting.NewTest">
+      <class name="testNgTesting.LoginTesting">
         <methods>
-          <include name="beforeTestingethod"/>
-          <include name="sampleTestingMethod4"/>
           <include name="afterMethodTesting"/>
-          <include name="objectCreationExtent"/>
           <include name="finishExtent"/>
+          <include name="loginPageTesting" invocation-numbers="0 1"/>
+          <include name="objectCreationExtent"/>
+          <include name="beforeTestingethod"/>
         </methods>
-      </class> <!-- testNgTesting.NewTest -->
+      </class> <!-- testNgTesting.LoginTesting -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

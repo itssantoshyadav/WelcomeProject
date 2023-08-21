@@ -4,7 +4,7 @@
 	<parameter name="browser" value="edge"></parameter>
   <test name="Test1">
     <classes>
-      <class name="testNgTesting.NewTest"/>
+      <class name="testNgTesting.LambadaTesting"/>
     </classes>
   </test>
 </suite> <!-- Suite -->

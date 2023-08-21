@@ -1,13 +1,17 @@
 package testNgTesting;
 
+import java.io.File;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
@@ -25,6 +29,8 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
+import CommonUtils.TakeScreenShotForFailedTestCases;
+
 public class NewTest {
 
 	WebDriver driver;
@@ -32,6 +38,7 @@ public class NewTest {
 	ExtentSparkReporter extentSparkReporter;
 	ExtentTest extentTest;
 	SoftAssert softAssert;
+
 	
 
 	@BeforeTest
@@ -48,6 +55,7 @@ public class NewTest {
 		driver.manage().window().maximize();
 		System.out.println("BeforeSuit");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		
 	}
 
 	@Test(groups = "One")
@@ -99,6 +107,9 @@ public class NewTest {
 	public void afterMethodTesting(ITestResult result) {
 		if(ITestResult.FAILURE==result.getStatus()) {
 			extentTest.fail(result.getThrowable().getMessage());
+			String filePath= TakeScreenShotForFailedTestCases.takeScreenShotTesting(driver);
+			extentTest.addScreenCaptureFromPath(filePath);
+			
 			
 		}
 	}

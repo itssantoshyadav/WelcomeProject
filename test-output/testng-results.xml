@@ -1,62 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-21T21:16:42 IST" name="Suite" finished-at="2023-08-21T21:17:12 IST" duration-ms="30328">
+  <suite started-at="2023-08-21T22:29:20 IST" name="Default suite" finished-at="2023-08-21T22:29:46 IST" duration-ms="26146">
     <groups>
       <group name="One">
-        <method signature="LambadaTesting.testingxpath()[pri:0, instance:testNgTesting.LambadaTesting@7b98f307]" name="testingxpath" class="testNgTesting.LambadaTesting"/>
+        <method signature="NewTest.sampleTestingMethod3()[pri:0, instance:testNgTesting.NewTest@77888435]" name="sampleTestingMethod3" class="testNgTesting.NewTest"/>
+        <method signature="NewTest.sampleTestingMethod4()[pri:0, instance:testNgTesting.NewTest@77888435]" name="sampleTestingMethod4" class="testNgTesting.NewTest"/>
+        <method signature="NewTest.test1()[pri:0, instance:testNgTesting.NewTest@77888435]" name="test1" class="testNgTesting.NewTest"/>
+        <method signature="NewTest.test12()[pri:0, instance:testNgTesting.NewTest@77888435]" name="test12" class="testNgTesting.NewTest"/>
       </group> <!-- One -->
-      <group name="Two">
-        <method signature="LambadaTesting.dynamicXpathTesting()[pri:0, instance:testNgTesting.LambadaTesting@7b98f307]" name="dynamicXpathTesting" class="testNgTesting.LambadaTesting"/>
-        <method signature="LambadaTesting.uploadingDcos()[pri:0, instance:testNgTesting.LambadaTesting@7b98f307]" name="uploadingDcos" class="testNgTesting.LambadaTesting"/>
-      </group> <!-- Two -->
-      <group name="Three">
-        <method signature="LambadaTesting.listOfElement()[pri:0, instance:testNgTesting.LambadaTesting@7b98f307]" name="listOfElement" class="testNgTesting.LambadaTesting"/>
-      </group> <!-- Three -->
     </groups>
-    <test started-at="2023-08-21T21:16:42 IST" name="Test1" finished-at="2023-08-21T21:17:12 IST" duration-ms="30328">
-      <class name="testNgTesting.LambadaTesting">
-        <test-method is-config="true" signature="objectCreationExtent()[pri:0, instance:testNgTesting.LambadaTesting@7b98f307]" started-at="2023-08-21T21:16:42 IST" name="objectCreationExtent" finished-at="2023-08-21T21:16:42 IST" duration-ms="210" status="PASS">
+    <test started-at="2023-08-21T22:29:20 IST" name="Default test" finished-at="2023-08-21T22:29:46 IST" duration-ms="26146">
+      <class name="testNgTesting.NewTest">
+        <test-method is-config="true" signature="objectCreationExtent()[pri:0, instance:testNgTesting.NewTest@77888435]" started-at="2023-08-21T22:29:20 IST" name="objectCreationExtent" finished-at="2023-08-21T22:29:24 IST" duration-ms="4560" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- objectCreationExtent -->
-        <test-method is-config="true" signature="beforesuittesting(java.lang.String)[pri:0, instance:testNgTesting.LambadaTesting@7b98f307]" started-at="2023-08-21T21:16:42 IST" name="beforesuittesting" finished-at="2023-08-21T21:16:46 IST" duration-ms="3798" status="PASS">
+        <test-method is-config="true" signature="beforeTestingethod()[pri:0, instance:testNgTesting.NewTest@77888435]" started-at="2023-08-21T22:29:24 IST" name="beforeTestingethod" finished-at="2023-08-21T22:29:24 IST" duration-ms="130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestingethod -->
+        <test-method signature="sampleTestingMethod3()[pri:0, instance:testNgTesting.NewTest@77888435]" started-at="2023-08-21T22:29:24 IST" name="sampleTestingMethod3" finished-at="2023-08-21T22:29:33 IST" duration-ms="8845" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleTestingMethod3 -->
+        <test-method is-config="true" signature="afterMethodTesting(org.testng.ITestResult)[pri:0, instance:testNgTesting.NewTest@77888435]" started-at="2023-08-21T22:29:33 IST" name="afterMethodTesting" finished-at="2023-08-21T22:29:33 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[edge]]>
+                <![CDATA[[TestResult name=sampleTestingMethod3 status=SUCCESS method=NewTest.sampleTestingMethod3()[pri:0, instance:testNgTesting.NewTest@77888435] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforesuittesting -->
-        <test-method signature="dynamicXpathTesting()[pri:0, instance:testNgTesting.LambadaTesting@7b98f307]" started-at="2023-08-21T21:16:46 IST" name="dynamicXpathTesting" finished-at="2023-08-21T21:16:55 IST" duration-ms="8465" status="PASS">
+        </test-method> <!-- afterMethodTesting -->
+        <test-method is-config="true" signature="beforeTestingethod()[pri:0, instance:testNgTesting.NewTest@77888435]" started-at="2023-08-21T22:29:33 IST" name="beforeTestingethod" finished-at="2023-08-21T22:29:33 IST" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dynamicXpathTesting -->
-        <test-method signature="listOfElement()[pri:0, instance:testNgTesting.LambadaTesting@7b98f307]" started-at="2023-08-21T21:16:55 IST" name="listOfElement" finished-at="2023-08-21T21:17:01 IST" duration-ms="6626" status="PASS">
+        </test-method> <!-- beforeTestingethod -->
+        <test-method signature="sampleTestingMethod4()[pri:0, instance:testNgTesting.NewTest@77888435]" started-at="2023-08-21T22:29:33 IST" name="sampleTestingMethod4" finished-at="2023-08-21T22:29:36 IST" duration-ms="2342" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [pure23243 - Google Search] but found [pure - Google Search]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [pure23243 - Google Search] but found [pure - Google Search]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at testNgTesting.NewTest.sampleTestingMethod4(NewTest.java:102)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- listOfElement -->
-        <test-method signature="testingxpath()[pri:0, instance:testNgTesting.LambadaTesting@7b98f307]" started-at="2023-08-21T21:17:01 IST" name="testingxpath" finished-at="2023-08-21T21:17:06 IST" duration-ms="4475" status="PASS">
+        </test-method> <!-- sampleTestingMethod4 -->
+        <test-method is-config="true" signature="afterMethodTesting(org.testng.ITestResult)[pri:0, instance:testNgTesting.NewTest@77888435]" started-at="2023-08-21T22:29:36 IST" name="afterMethodTesting" finished-at="2023-08-21T22:29:36 IST" duration-ms="248" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=sampleTestingMethod4 status=FAILURE method=NewTest.sampleTestingMethod4()[pri:0, instance:testNgTesting.NewTest@77888435] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testingxpath -->
-        <test-method signature="uploadingDcos()[pri:0, instance:testNgTesting.LambadaTesting@7b98f307]" started-at="2023-08-21T21:17:06 IST" name="uploadingDcos" finished-at="2023-08-21T21:17:12 IST" duration-ms="6014" status="PASS">
+        </test-method> <!-- afterMethodTesting -->
+        <test-method is-config="true" signature="beforeTestingethod()[pri:0, instance:testNgTesting.NewTest@77888435]" started-at="2023-08-21T22:29:36 IST" name="beforeTestingethod" finished-at="2023-08-21T22:29:36 IST" duration-ms="24" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- uploadingDcos -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testNgTesting.LambadaTesting@7b98f307]" started-at="2023-08-21T21:17:12 IST" name="teardown" finished-at="2023-08-21T21:17:12 IST" duration-ms="414" status="PASS">
+        </test-method> <!-- beforeTestingethod -->
+        <test-method signature="test1()[pri:0, instance:testNgTesting.NewTest@77888435]" started-at="2023-08-21T22:29:36 IST" name="test1" finished-at="2023-08-21T22:29:40 IST" duration-ms="4239" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="finishExtent()[pri:0, instance:testNgTesting.LambadaTesting@7b98f307]" started-at="2023-08-21T21:17:12 IST" name="finishExtent" finished-at="2023-08-21T21:17:12 IST" duration-ms="271" status="PASS">
+        </test-method> <!-- test1 -->
+        <test-method is-config="true" signature="afterMethodTesting(org.testng.ITestResult)[pri:0, instance:testNgTesting.NewTest@77888435]" started-at="2023-08-21T22:29:40 IST" name="afterMethodTesting" finished-at="2023-08-21T22:29:40 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test1 status=SUCCESS method=NewTest.test1()[pri:0, instance:testNgTesting.NewTest@77888435] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodTesting -->
+        <test-method is-config="true" signature="beforeTestingethod()[pri:0, instance:testNgTesting.NewTest@77888435]" started-at="2023-08-21T22:29:40 IST" name="beforeTestingethod" finished-at="2023-08-21T22:29:40 IST" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestingethod -->
+        <test-method signature="test12()[pri:0, instance:testNgTesting.NewTest@77888435]" started-at="2023-08-21T22:29:40 IST" name="test12" finished-at="2023-08-21T22:29:44 IST" duration-ms="3779" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test12 -->
+        <test-method is-config="true" signature="afterMethodTesting(org.testng.ITestResult)[pri:0, instance:testNgTesting.NewTest@77888435]" started-at="2023-08-21T22:29:44 IST" name="afterMethodTesting" finished-at="2023-08-21T22:29:44 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test12 status=SUCCESS method=NewTest.test12()[pri:0, instance:testNgTesting.NewTest@77888435] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodTesting -->
+        <test-method is-config="true" signature="finishExtent()[pri:0, instance:testNgTesting.NewTest@77888435]" started-at="2023-08-21T22:29:44 IST" name="finishExtent" finished-at="2023-08-21T22:29:46 IST" duration-ms="1877" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finishExtent -->
-      </class> <!-- testNgTesting.LambadaTesting -->
-    </test> <!-- Test1 -->
-  </suite> <!-- Suite -->
+      </class> <!-- testNgTesting.NewTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

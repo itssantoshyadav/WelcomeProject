@@ -3,18 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNgTesting.LambadaTesting">
+      <class name="testNgTesting.NewTest">
         <methods>
-          <include name="dynamicXpathTesting"/>
-          <include name="beforesuittesting"/>
-          <include name="uploadingDcos"/>
-          <include name="testingxpath"/>
-          <include name="finishExtent"/>
+          <include name="beforeTestingethod"/>
+          <include name="sampleTestingMethod4"/>
+          <include name="afterMethodTesting"/>
           <include name="objectCreationExtent"/>
-          <include name="listOfElement"/>
-          <include name="teardown"/>
+          <include name="finishExtent"/>
         </methods>
-      </class> <!-- testNgTesting.LambadaTesting -->
+      </class> <!-- testNgTesting.NewTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

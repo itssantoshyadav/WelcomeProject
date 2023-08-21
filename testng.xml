@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="classes" thread-count="2">
+	<test name="Module1">
+		<groups>
+			<define name="Smoke">
+				<include name="One"></include>
+				<include name="Two"></include>
+			</define>
+			<define name="Regression">
+				<include name="Three"></include>
+				<include name="Four"></include>
+			</define>
+			<run>
+				<include name="Smoke" />
+				<include name="Regression" />
+			</run>
+		</groups>
+		<classes>
+			<class name="testNgTesting.NewTest" />
+			<class name="testNgTesting.Sample1" />
+			<class name="testNgTesting.Sample2" />
+		</classes>
+	</test>
+	<test name="Module2">
+		<classes>
+			<class name="testNgTesting.LambadaTesting" />
+			<class name="testNgTesting.SeleniumEasy" />
+			<class name="testNgTesting.SoftAsserttesting" />
+			<class name="testNgTesting.TestNgClass2" />
+		</classes>
+	</test>
+</suite>

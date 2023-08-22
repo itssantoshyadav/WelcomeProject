@@ -3,15 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNgTesting.LoginTesting">
+      <class name="testNgTesting.DevToolsTesting">
         <methods>
-          <include name="afterMethodTesting"/>
-          <include name="finishExtent"/>
-          <include name="loginPageTesting" invocation-numbers="0 1"/>
-          <include name="objectCreationExtent"/>
-          <include name="beforeTestingethod"/>
+          <include name="emulateDeviceWithSend"/>
         </methods>
-      </class> <!-- testNgTesting.LoginTesting -->
+      </class> <!-- testNgTesting.DevToolsTesting -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

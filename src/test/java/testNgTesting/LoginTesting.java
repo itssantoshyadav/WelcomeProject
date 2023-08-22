@@ -7,6 +7,10 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Properties;
 
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,6 +29,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
 
+import CommonUtils.MyRetry;
 import CommonUtils.TakeScreenShotForFailedTestCases;
 
 public class LoginTesting {
@@ -63,14 +68,14 @@ public class LoginTesting {
 
 	}
 
-	@Test(dataProvider = "testdata1")
-	public void loginPageTesting(String strUser, String strPass) {
+	@Test(dataProvider = "testdata2" ,retryAnalyzer = MyRetry.class)
+	public void loginPageTesting(String strUser, String strPass) throws IOException {
 		extentTest = extentReports.createTest("loginPageTesting");
 		driver.get(prop.getProperty("url"));
-		driver.findElement(By.id("username")).sendKeys(strUser);
-		driver.findElement(By.id("password")).sendKeys(strPass);
-		driver.findElement(By.id("password")).submit();
-		Boolean msg = driver.findElement(By.cssSelector("div.flash.success")).isDisplayed();
+		driver.findElement(By.id(provideDateUsingExcel("loginPage_UserName"))).sendKeys(strUser);
+		driver.findElement(By.id(provideDateUsingExcel("loginPage_Password"))).sendKeys(strPass);
+		driver.findElement(By.id(provideDateUsingExcel("loginPage_Password"))).submit();
+		Boolean msg = driver.findElement(By.cssSelector(provideDateUsingExcel("loginPage_SuccessMsg"))).isDisplayed();
 		softAssert.assertTrue(msg);
 		softAssert.assertAll();
 
@@ -100,6 +105,22 @@ public class LoginTesting {
 		twitterdata[1][0] = "username2@gmail.com";
 		twitterdata[1][1] = "Password2";
 		return twitterdata;
+	}
+	
+	public String provideDateUsingExcel(String objectName) throws IOException {
+		String locatorValue=null;
+		String filePath = System.getProperty("user.dir")+"//src//test//resources//testData//Locators.xlsx";
+		FileInputStream file= new FileInputStream(filePath);
+		XSSFWorkbook workbook = new XSSFWorkbook(filePath);
+		XSSFSheet sheet= workbook.getSheet("Login");
+		for(int i=0;i<=sheet.getLastRowNum();i++) {
+			 XSSFRow row = sheet.getRow(i);
+			 if((row.getCell(0).getStringCellValue()).equalsIgnoreCase(objectName)){
+				 locatorValue=row.getCell(1).getStringCellValue();
+			 }
+		}
+		return locatorValue;
+		
 	}
 
 	@AfterMethod
